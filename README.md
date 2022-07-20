@@ -10,7 +10,7 @@
 <h2 class="code-line" data-line-start=2 data-line-end=3 ><a id="Installation_2"></a>Installation</h2>
 <p class="has-line-data" data-line-start="4" data-line-end="5">Please check the official laravel installation guide for server requirements before you start. <a href="https://laravel.com/docs/8.x">Official Documentation</a></p>
 <p class="has-line-data" data-line-start="6" data-line-end="7">Clone the repository</p>
-<pre><code>git clone git@github.com:gothinkster/laravel-realworld-example-app.git
+<pre><code>git clone https://github.com/IktiarSaputra/overtime-system.git
 </code></pre>
 <p class="has-line-data" data-line-start="10" data-line-end="11">Switch to the repo folder</p>
 <pre><code>cd laravel-realworld-example-app
