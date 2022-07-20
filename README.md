@@ -13,7 +13,7 @@
 <pre><code>git clone https://github.com/IktiarSaputra/overtime-system.git
 </code></pre>
 <p class="has-line-data" data-line-start="10" data-line-end="11">Switch to the repo folder</p>
-<pre><code>cd laravel-realworld-example-app
+<pre><code>cd overtime-system
 </code></pre>
 <p class="has-line-data" data-line-start="14" data-line-end="15">Install all the dependencies using composer</p>
 <pre><code>composer install
