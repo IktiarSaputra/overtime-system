@@ -1,0 +1,426 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Laravel OpenApi Demo Documentation",
+        "description": "L5 Swagger OpenApi description",
+        "contact": {
+            "email": "admin@admin.com"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://127.0.0.1:8000/api/",
+            "description": "Demo API Server"
+        }
+    ],
+    "paths": {
+        "/employees": {
+            "get": {
+                "tags": [
+                    "Employees"
+                ],
+                "summary": "Get all employees",
+                "description": "Returns all employees",
+                "operationId": "getEmployee",
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid tag value"
+                    },
+                    "401": {
+                        "description": "Unauthorized action."
+                    },
+                    "500": {
+                        "description": "Internal server error"
+                    },
+                    "405": {
+                        "description": "Invalid HTTP verb used"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2_security_example": [
+                            "write:projects",
+                            "read:projects"
+                        ]
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "Employees"
+                ],
+                "summary": "Create a new employee",
+                "description": "Create a new employee",
+                "operationId": "createEmployee",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "path",
+                        "description": "Employee name",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "salary",
+                        "in": "path",
+                        "description": "Employee salary",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "name": {
+                                        "description": "Employee name",
+                                        "type": "string"
+                                    },
+                                    "salary": {
+                                        "description": "Employee salary",
+                                        "type": "integer"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid tag value"
+                    },
+                    "401": {
+                        "description": "Unauthorized action."
+                    },
+                    "500": {
+                        "description": "Internal server error"
+                    },
+                    "405": {
+                        "description": "Invalid HTTP verb used"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2_security_example": [
+                            "write:projects",
+                            "read:projects"
+                        ]
+                    }
+                ]
+            }
+        },
+        "/overtimes": {
+            "get": {
+                "tags": [
+                    "Overtimes"
+                ],
+                "summary": "Get all overtimes",
+                "description": "Returns all overtimes",
+                "operationId": "getOvertime",
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid tag value"
+                    },
+                    "401": {
+                        "description": "Unauthorized action."
+                    },
+                    "500": {
+                        "description": "Internal server error"
+                    },
+                    "405": {
+                        "description": "Invalid HTTP verb used"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2_security_example": [
+                            "write:projects",
+                            "read:projects"
+                        ]
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "Overtimes"
+                ],
+                "summary": "Create a new overtime",
+                "description": "Create a new overtime",
+                "operationId": "storeOvertime",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "employee_id": {
+                                        "description": "Employee id",
+                                        "type": "integer"
+                                    },
+                                    "date": {
+                                        "description": "Date",
+                                        "type": "string",
+                                        "format": "Y-m-d"
+                                    },
+                                    "time_start": {
+                                        "description": "Time start",
+                                        "type": "string",
+                                        "format": "H:i:s"
+                                    },
+                                    "time_ended": {
+                                        "description": "Time ended",
+                                        "type": "string",
+                                        "format": "H:i"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid tag value"
+                    },
+                    "401": {
+                        "description": "Unauthorized action."
+                    },
+                    "500": {
+                        "description": "Internal server error"
+                    },
+                    "405": {
+                        "description": "Invalid HTTP verb used"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2_security_example": [
+                            "write:projects",
+                            "read:projects"
+                        ]
+                    }
+                ]
+            }
+        },
+        "/overtime-pays/calculate": {
+            "get": {
+                "tags": [
+                    "Overtimes"
+                ],
+                "summary": "Get all overtime pays",
+                "description": "Returns all overtime pays",
+                "operationId": "getOvertimePay",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "month": {
+                                        "description": "Month",
+                                        "type": "string",
+                                        "format": "Y-m"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid tag value"
+                    },
+                    "401": {
+                        "description": "Unauthorized action."
+                    },
+                    "500": {
+                        "description": "Internal server error"
+                    },
+                    "405": {
+                        "description": "Invalid HTTP verb used"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2_security_example": [
+                            "write:projects",
+                            "read:projects"
+                        ]
+                    }
+                ]
+            }
+        },
+        "/settings": {
+            "get": {
+                "tags": [
+                    "Settings"
+                ],
+                "summary": "Get all settings",
+                "description": "Returns all settings",
+                "operationId": "getSetting",
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid tag value"
+                    },
+                    "401": {
+                        "description": "Unauthorized action."
+                    },
+                    "500": {
+                        "description": "Internal server error"
+                    },
+                    "405": {
+                        "description": "Invalid HTTP verb used"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2_security_example": [
+                            "write:projects",
+                            "read:projects"
+                        ]
+                    }
+                ]
+            },
+            "patch": {
+                "tags": [
+                    "Settings"
+                ],
+                "summary": "Create a new setting",
+                "description": "Create a new setting",
+                "operationId": "createSetting",
+                "parameters": [
+                    {
+                        "name": "key",
+                        "in": "path",
+                        "description": "Setting key",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "value",
+                        "in": "path",
+                        "description": "Setting value",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "key": {
+                                        "description": "Setting key",
+                                        "type": "string"
+                                    },
+                                    "value": {
+                                        "description": "Setting value",
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Invalid tag value"
+                    },
+                    "401": {
+                        "description": "Unauthorized action."
+                    },
+                    "500": {
+                        "description": "Internal server error"
+                    },
+                    "405": {
+                        "description": "Invalid HTTP verb used"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2_security_example": [
+                            "write:projects",
+                            "read:projects"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Projects",
+            "description": "API Endpoints of Projects"
+        }
+    ]
+}
