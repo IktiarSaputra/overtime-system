@@ -1,3 +1,11 @@
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+
+<p align="center">
+<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+</p>
 <h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="Getting_started_0"></a>Getting started</h1>
 <h2 class="code-line" data-line-start=2 data-line-end=3 ><a id="Installation_2"></a>Installation</h2>
 <p class="has-line-data" data-line-start="4" data-line-end="5">Please check the official laravel installation guide for server requirements before you start. <a href="https://laravel.com/docs/5.4/installation#installation">Official Documentation</a></p>
