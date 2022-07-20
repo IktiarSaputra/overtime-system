@@ -125,3 +125,7 @@
     -H 'accept: application/json' \
     -H 'X-CSRF-TOKEN: '
 </code></pre>
+<h2 class="code-line" data-line-start=102 data-line-end=103 ><a id="Run_Laravel_Test_102"></a>Run Laravel Test</h2>
+<p class="has-line-data" data-line-start="103" data-line-end="104">You can Testing with Laravel Test</p>
+<pre><code>php artisan test
+</code></pre>
